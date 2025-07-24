@@ -10,9 +10,9 @@ const io = new Server(server);
 
 io.on("connection", (socket) => {
   console.log("A user is connected", socket.id);
-  setInterval(() => {
-    socket.emit("message", "message from server-" + socket.id + new Date());
-  }, 5000);
+  // setInterval(() => {
+  //   socket.emit("message", "message from server-" + socket.id + new Date());
+  // }, 5000);
 
   socket.on("disconnect", () => {
     console.log("User disconnected", socket.id);
